@@ -1,0 +1,10 @@
+apiVersion:
+kind: Pod
+metadata:
+ name: stress
+spec:
+ containers:
+ - image: nitisha2/stress 
+   imagePullPolicy: Always
+   name: stress
+   
