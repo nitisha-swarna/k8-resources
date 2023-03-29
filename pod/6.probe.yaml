@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pob
+metadata:
+  name: probe
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    livenessProbe:
+      httpGet:
+        pah: /
+        port: 80
+      initialDelaySeconds: 3
+      periodSeconds: 5
