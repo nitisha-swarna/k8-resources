@@ -8,3 +8,4 @@ spec:
   - image: nitisha2/stress
     imagePullPolicy: Always
     name: stress
+    command: ["sleep", "200"]
