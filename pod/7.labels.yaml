@@ -6,6 +6,8 @@ metadata:
   course: docker
   duration: 25hrs
   trainer: shiva
+ annotations:
+  org.kuberentes.docker.nitisha: nitisha
 spec:
  containers:
  - name: nginx
