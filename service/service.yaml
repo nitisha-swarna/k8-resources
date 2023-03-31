@@ -4,12 +4,12 @@ kind: pod
 metadata:
  name: nginx
  labels:
-  name: nginx
+   name: nginx
 spec:
  containers:
  - name: nginx
    image: nginx
-   port:
+   ports:
    - containerPort: 80
 
 
@@ -21,7 +21,7 @@ metadata:
 spec:
  selector:
    name: nginx
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+ ports:
+   - protocol: TCP
+     port: 80
+     targetPort: 80
