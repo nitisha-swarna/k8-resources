@@ -4,7 +4,7 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: 
+      rolearn: arn:aws:iam::478811340053:role/eksctl-spot-cluster-nodegroup-spo-NodeInstanceRole-190T2ICKN9W8B
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     - userarn: arn:aws:iam::478811340053:user/EKS-CLUSTER
