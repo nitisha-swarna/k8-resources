@@ -4,15 +4,16 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::478811340053:role/eksctl-spot-cluster-nodegroup-spo-NodeInstanceRole-190T2ICKN9W8B
+      rolearn: 
       username: system:node:{{EC2PrivateDNSName}}
-  mapUsers:
+  mapUsers: |
     - userarn: arn:aws:iam::478811340053:user/EKS-CLUSTER
       username: EKS-CLUSTER
+    
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2023-04-19T17:11:42Z"
+  creationTimestamp: "2023-04-05T14:29:13Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1676"
-  uid: bb9267e6-6fee-41c4-9264-179873641912
+  resourceVersion: "8381"
+  uid: 04fc6c1d-39e1-480a-815c-992ec55879e3
