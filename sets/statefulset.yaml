@@ -19,7 +19,7 @@ spec:
   ports:
   - port: 80
     name: web
-  clusterIP: None
+  clusterIP: None #headless service
   selector:
     app: nginx
 ---
@@ -42,7 +42,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: nginx
-        image: registry.k8s.io/nginx-slim:0.8
+        image: nginx
         ports:
         - containerPort: 80
           name: web
@@ -54,7 +54,7 @@ spec:
       name: www
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "my-storage-class"
+      storageClassName: "ebs-sc"
       resources:
         requests:
           storage: 1Gi
